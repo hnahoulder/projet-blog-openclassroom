@@ -2,14 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <h2>POSTS</h2>
-            <ul class="list-group">
-                <app-post-list *ngFor="let post of postList"
-                               [title]="post.title"
-                               [content]="post.content"
-                               [create_at]="post.create_at"
-                               [loveIts]="post.loveIts"
-                ></app-post-list>
-            </ul>
+            <app-post-list [postArray]="postList"></app-post-list>
         </div>
     </div>
 </div>

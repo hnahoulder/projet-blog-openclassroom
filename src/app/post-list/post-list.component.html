@@ -1,17 +1,5 @@
-<li [ngClass]="{'list-group-item': true,
-                'list-group-item-success': loveIts>0,
-                'list-group-item-danger': loveIts<0
-                }
-">
-  <div class="row">
-    <div class="col-xs-12">
-      <h4 class="col-xs-4">{{title}}</h4>
-      <span class="col-xs-4 col-xs-offset-4">{{create_at | date: 'short'}}</span>
-    </div>
-  </div>
-
-  <p>{{content}}</p>
-
-  <button (click)="addLoveIt()" class="btn btn-success">Love it!</button>
-  <button (click)="minusLoveIt()" class="btn btn-danger">Don't love it!</button>
-</li>
+<div class="row">
+    <app-post-list-item *ngFor="let el of postArray"
+                        [element]="el"
+    ></app-post-list-item>
+</div>
